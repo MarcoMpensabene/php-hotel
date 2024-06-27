@@ -15,10 +15,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <form class=" container py-5 d-flex w-75" method="GET" action="./index.php">
-        <label for="isParkingAllowed" class="form-label me-2">Check if the parking is avabile :</label>
-        <input type="text" class="form-control w-50 me-2" name="isParkingAllowed" id="isParkingAllowed">
-        <button type="submit" class="btn btn-primary">SUBMIT</button>
+    <form class=" container py-5" method="GET" action="./index.php">
+        <!-- input for filtering the parking -->
+        <div class="d-flex pb-3 ">
+            <label for="isParkingAllowed" class="form-label me-2 w-25">Check if the parking is avabile :</label>
+            <input type="text" class="form-control me-2" name="isParkingAllowed" id="isParkingAllowed">
+            <button type="submit" class="btn btn-primary">SUBMIT</button>
+        </div>
+        <!-- input for filtering by vote -->
+        <div class="d-flex ">
+            <label for="hotelVote" class="form-label me-2 w-25">Find the hotel at this vote :</label>
+            <input type="text" class="form-control  me-2" name="hotelVote" id="hotelVote">
+            <button type="submit" class="btn btn-primary">SUBMIT</button>
+        </div>
     </form>
 
     <div class="container">
