@@ -1,12 +1,5 @@
 <?php   include_once __DIR__ . "/utilities/hotelsList.php";   
 
-foreach($hotels as $element){
-    echo $element["name"];
-    echo $element["description"];
-    echo $element["parking"];
-    echo $element["vote"];
-    echo $element["distance_to_center"];
-}
 
 ?>
 
@@ -24,33 +17,26 @@ foreach($hotels as $element){
 <body>
     
 <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
+    <thead>
+        <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">parking</th>
+        <th scope="col">vote</th>
+        <th scope="col">distance_to_center</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($hotels as $hotel) { ?>
+        <tr>   
+        <td scope="row"><?php echo $hotel["name"] ?></td>
+        <td scope="row"><?php echo $hotel["description"] ?></td>
+        <td scope="row"><?php echo $hotel["parking"] ?></td>
+        <td scope="row"><?php echo $hotel["vote"] ?></td>
+        <td scope="row"><?php echo $hotel["distance_to_center"] ?></td>
+        <?php  }  ?>
+        </tr>
+    </tbody>
 </table>
 </body>
 </html>
